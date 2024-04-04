@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "npx nx run shell:serve --open=true",
     "devserve": "npx nx run shell:serve --open=true --devRemotes=breweries",
+    "lint": "npx nx run-many --target=lint --projects=breweries,breweries-e2e,breweries-entry,brewery-search,core,dashboard,shell,shell-e2e,toolbar",
     "test": "npx nx run-many --target=test --projects=breweries,breweries-entry,brewery-search,core,dashboard,shell,toolbar"
   },
   "private": true,

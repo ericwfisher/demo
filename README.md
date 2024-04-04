@@ -12,6 +12,12 @@ git clone https://github.com/ericwfisher/demo.git
 npm i
 ```
 
+### Liniting
+
+```
+npm run lint
+```
+
 ### Unit Test
 
 ```
