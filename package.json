@@ -2,7 +2,11 @@
   "name": "@demo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve": "npx nx run shell:serve --open=true",
+    "devserve": "npx nx run shell:serve --open=true --devRemotes=breweries",
+    "test": "npx nx run-many --target=test --projects=breweries,breweries-entry,brewery-search,core,dashboard,shell,toolbar"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.3.0",

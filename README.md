@@ -12,13 +12,19 @@ git clone https://github.com/ericwfisher/demo.git
 npm i
 ```
 
+### Unit Test
+
+```
+npm run test
+```
+
 ### Serve
 To just run the app
 ```
-npx nx run shell:serve --open=true
+npm run serve
 ```
 
 For development
 ```
-npx nx run shell:serve --open=true --devRemotes=breweries
+npm run devserve
 ```
