@@ -13,8 +13,8 @@
   <ng-container *ngIf="brewpubs$ | async as meta">
     <p-card
       class="brewpub-card"
-      i18n-header="@@totalBrewpubs"
-      header="Total Brewpubs"
+      i18n-header="@@brewpubs"
+      header="Brewpubs"
       (click)="onCardClick(['brewpub'])"
     >
       <div class="meta-data">{{ meta.total }}</div>
@@ -24,8 +24,8 @@
   <ng-container *ngIf="micros$ | async as meta">
     <p-card
       class="micro-card"
-      i18n-header="@@totalMicroBreweries"
-      header="Total Micro Breweries"
+      i18n-header="@@microBreweries"
+      header="Micro Breweries"
       (click)="onCardClick(['micro'])"
     >
       <div class="meta-data">{{ meta.total }}</div>
