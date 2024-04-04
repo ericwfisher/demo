@@ -1,0 +1,109 @@
+{
+  "name": "breweries",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/mfes/breweries/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/mfes/breweries",
+        "index": "apps/mfes/breweries/src/index.html",
+        "main": "apps/mfes/breweries/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/mfes/breweries/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/mfes/breweries/src/favicon.ico",
+          "apps/mfes/breweries/src/assets"
+        ],
+        "styles": ["apps/mfes/breweries/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/mfes/breweries/webpack.config.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/mfes/breweries/webpack.prod.config.ts"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4201,
+        "publicHost": "http://localhost:4201"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "breweries:build:production"
+        },
+        "development": {
+          "buildTarget": "breweries:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "breweries:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/mfes/breweries/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "breweries:build",
+        "port": 4201,
+        "watch": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "breweries:build:development"
+        },
+        "production": {
+          "buildTarget": "breweries:build:production"
+        }
+      }
+    }
+  }
+}

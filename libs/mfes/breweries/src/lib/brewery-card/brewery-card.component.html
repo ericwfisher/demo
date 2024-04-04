@@ -1,0 +1,12 @@
+<p-card [header]="brewery?.name">
+  <div class="brewery-details">
+    <div *ngIf="brewery?.address_1 as value">{{ value }}</div>
+    <div *ngIf="brewery?.address_2 as value">{{ value }}</div>
+    <div *ngIf="brewery?.address_3 as value">{{ value }}</div>
+    <div>
+      <span *ngIf="brewery?.city as value">{{ value }}</span>
+      <span *ngIf="brewery?.state_province as value">, {{ value }}</span>
+    </div>
+    <div *ngIf="brewery?.country as value">{{ value }}</div>
+  </div>
+</p-card>

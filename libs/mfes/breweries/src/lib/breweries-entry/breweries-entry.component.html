@@ -1,0 +1,6 @@
+<div class="card-grid">
+  <lib-brewery-card
+    *ngFor="let brewery of breweries$ | async"
+    [brewery]="brewery"
+  ></lib-brewery-card>
+</div>

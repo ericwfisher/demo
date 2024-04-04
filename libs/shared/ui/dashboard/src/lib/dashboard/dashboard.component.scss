@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  padding: 2vmax;
+
+  .dashboard-grid {
+    display: grid;
+    gap: 2rem;
+
+    .total-card {
+      grid-area: 1 / 1 / span 1 / span 2;
+    }
+    .large-card {
+      grid-area: 3 / 2 / span 2 / span 1;
+      height: 100%;
+    }
+  }
+
+  p-card:hover {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  ::ng-deep {
+    .meta-data {
+      color: var(--green-600);
+      font-size: 5vmax;
+      font-weight: 600;
+
+      &--lg {
+        font-size: 10vmax;
+      }
+      &--xl {
+        font-size: 15vmax;
+      }
+      &--sad {
+        color: var(--red-500);
+      }
+    }
+
+    .p-card {
+      height: 100%;
+    }
+  }
+}

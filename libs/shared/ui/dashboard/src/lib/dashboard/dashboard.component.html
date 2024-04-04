@@ -1,0 +1,68 @@
+<div class="dashboard-grid">
+  <ng-container *ngIf="allMeta$ | async as meta">
+    <p-card
+      class="total-card"
+      i18n-header="@@totalBreweries"
+      header="Total Breweries"
+      (click)="onCardClick()"
+    >
+      <div class="meta-data meta-data--lg">{{ meta.total }}</div>
+    </p-card>
+  </ng-container>
+
+  <ng-container *ngIf="brewpubs$ | async as meta">
+    <p-card
+      class="brewpub-card"
+      i18n-header="@@totalBrewpubs"
+      header="Total Brewpubs"
+      (click)="onCardClick(['brewpub'])"
+    >
+      <div class="meta-data">{{ meta.total }}</div>
+    </p-card>
+  </ng-container>
+
+  <ng-container *ngIf="micros$ | async as meta">
+    <p-card
+      class="micro-card"
+      i18n-header="@@totalMicroBreweries"
+      header="Total Micro Breweries"
+      (click)="onCardClick(['micro'])"
+    >
+      <div class="meta-data">{{ meta.total }}</div>
+    </p-card>
+  </ng-container>
+
+  <ng-container *ngIf="usa$ | async as meta">
+    <p-card
+      class="usa-card"
+      i18n-header="@@USBreweries"
+      header="U.S. Breweries"
+      (click)="onCardClick(['us'])"
+    >
+      <div class="meta-data">{{ meta.total }}</div>
+    </p-card>
+  </ng-container>
+
+  <ng-container *ngIf="large$ | async as meta">
+    <p-card
+      class="large-card"
+      i18n-header="@@largeBreweries"
+      header="Large Breweries"
+      (click)="onCardClick(['large'])"
+    >
+      <div class="meta-data meta-data--xl">{{ meta.total }}</div>
+    </p-card>
+  </ng-container>
+
+  <ng-container *ngIf="closed$ | async as meta">
+    <p-card
+      class="closed-card"
+      i18n-header="@@closedBreweries"
+      header="Closed Breweries :("
+      (click)="onCardClick(['closed'])"
+    >
+      <div class="meta-data meta-data--sad">{{ meta.total }}</div>
+    </p-card>
+  </ng-container>
+</div>
+

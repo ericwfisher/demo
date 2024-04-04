@@ -14,7 +14,16 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@demo/breweries-entry": ["libs/mfes/breweries/src/index.ts"],
+      "@demo/brewery-search": ["libs/shared/ui/brewery-search/src/index.ts"],
+      "@demo/core": ["libs/shared/core/src/index.ts"],
+      "@demo/dashboard": ["libs/shared/ui/dashboard/src/index.ts"],
+      "@demo/toolbar": ["libs/shared/ui/toolbar/src/index.ts"],
+      "breweries/Routes": [
+        "apps/mfes/breweries/src/app/remote-entry/entry.routes.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

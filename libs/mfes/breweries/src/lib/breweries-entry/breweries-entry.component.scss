@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  padding: 0 2vmax;
+  padding-bottom: 1rem;
+
+  .card-grid {
+    display: grid;
+    gap: 1rem;
+  }
+}

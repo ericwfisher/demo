@@ -1,0 +1,17 @@
+:host {
+  img {
+    max-height: 32px;
+  }
+  .app-name {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+    font-weight: 300;
+  }
+
+  ::ng-deep {
+    .p-toolbar {
+      border-radius: 0;
+      padding: 1rem;
+    }
+  }
+}

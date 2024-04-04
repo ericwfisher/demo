@@ -1,0 +1,26 @@
+:host {
+  display: grid;
+  place-items: center;
+  grid-auto-flow: row;
+  gap: 1rem;
+
+  .or-separator {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--surface-500);
+
+    &::before,
+    &::after {
+      content: ' - ';
+    }
+  }
+
+  ::ng-deep {
+    .p-button {
+      text-transform: capitalize;
+    }
+    .p-inputtext {
+      width: max(250px, 50vw);
+    }
+  }
+}
