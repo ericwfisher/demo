@@ -36,7 +36,7 @@ export class BreweriesEntryComponent implements OnInit {
       case 'micro':
       case 'brewpub':
       case 'large':
-      case 'large':
+      case 'closed':
         this.breweries$ = this.apiSvc.getByType(route);
         break;
       case 'us':

@@ -7,7 +7,7 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 
 @Component({
-  selector: 'brewery-search',
+  selector: 'lib-brewery-search',
   standalone: true,
   templateUrl: './brewery-search.component.html',
   styleUrl: './brewery-search.component.scss',
