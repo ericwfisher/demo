@@ -12,7 +12,7 @@ git clone https://github.com/ericwfisher/demo.git
 npm i
 ```
 
-### Liniting
+### Lint
 
 ```
 npm run lint
